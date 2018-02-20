@@ -8,6 +8,6 @@ describe('Hello world should', function () {
     });
 });
 
-describe('jest should',  () =>{
-    it('work with ES6', () =>{});
+describe('jest should', () => {
+    it('work with ES6', () => {});
 });
