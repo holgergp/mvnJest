@@ -7,3 +7,7 @@ describe('Hello world should', function () {
         expect(helloWorld()).toBe('Hello World');
     });
 });
+
+describe('jest should',  () =>{
+    it('work with ES6', () =>{});
+});
