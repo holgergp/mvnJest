@@ -1,0 +1,2 @@
+- Bootstrap project from Spring Initializr with Web template
+- https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/
