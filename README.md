@@ -14,7 +14,7 @@ The idea is to manage all client side artifacts by npm/webpack and to reference 
 
 - Run the Spring Boot app via `mvn spring-boot:run` or via IDE (I run it via IntelliJ Spring-Boot-Dashboard)
 
-Looking at http://localhsot:8080 will show the simple webapp.
+Looking at http://localhost:8080 will show the simple webapp.
 
 ##Testing
 
