@@ -16,6 +16,7 @@
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.7",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^22.3.0",
     "jest-cli": "^22.3.0",
     "style-loader": "^0.20.2",
@@ -25,5 +26,14 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/test/javascript/setup-jest.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }
