@@ -26,7 +26,6 @@ describe('ModalDialog should', () => {
 
     it('open on a click at the clickable element', () => {
         document.querySelector('#openDialog').click();
-        console.log('blabbel', document.body.innerHTML);
         expect(isDialogOpen()).toBe(true);
     });
 
