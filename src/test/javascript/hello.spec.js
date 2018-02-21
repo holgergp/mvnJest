@@ -1,10 +1,15 @@
 import {
-    initDialog,
+    initPage,
     isDialogOpen
 } from '../../main/javascript/hello';
 
 import 'jquery-ui/ui/unique-id';
 import 'jquery-ui/ui/widgets/button';
+import 'jquery-ui/ui/safe-active-element';
+import 'jquery-ui/ui/data';
+import 'jquery-ui/ui/tabbable';
+import 'jquery-ui/ui/focusable';
+import 'jquery-ui/ui/safe-blur';
 
 describe('ModalDialog should', () => {
     beforeEach(() => {
@@ -14,32 +19,37 @@ describe('ModalDialog should', () => {
     afterEach(() => {
         destroyDOM();
     });
+
     it('be closed on site startup', () => {
         expect(isDialogOpen()).toBe(false);
     });
 
-    it('open on a click at the clickable element', (done) => {
-
-        done.fail();
-    });
-    it('close on click at the x button in the modal ', (done) => {
-        done.fail();
+    it('open on a click at the clickable element', () => {
+        document.querySelector('#openDialog').click();
+        console.log('blabbel', document.body.innerHTML);
+        expect(isDialogOpen()).toBe(true);
     });
 
-    it('open and close on click at the clickable element', (done) => {
-        done.fail();
+    it('close on click at the x button in the modal ', () => {
+        $('.ui-button').click();
+        expect(isDialogOpen()).toBe(false);
+    });
+
+    it('open and close on click at the clickable element', () => {
+        $('#openDialog').click();
+        $('#openDialog').click();
+        expect(isDialogOpen()).toBe(false);
     });
 });
 
 const setupDOM = () => {
     document.body.innerHTML =
         '<div>' +
-        '  <div id="openDialog" />' +
-        '  <button id="dialog" >' +
-        '   TestContent' +
-        '</button>' +
+        '  <div id="openDialog" >Click</div>' +
+        '  <div id="dialog" />' +
+        '' +
         '</div>';
-    initDialog();
+    initPage();
 };
 
 const destroyDOM = () => {
