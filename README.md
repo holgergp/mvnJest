@@ -9,6 +9,11 @@ The idea is to manage all client side artifacts by npm/webpack and to reference 
 
 ## Installation
 
+- If you just want to see the app just run `mvn spring-boot:run`
+  - This will do a client build and you are good to go.
+
+### Details
+If you want to have some more control:
 - `npm install` to get all client side libs.
 - `npm start` to build the web-jar.
 - `mvn clean install` to build the server part
@@ -23,6 +28,3 @@ Looking at http://localhost:8080 will show the simple webapp.
 
 - `npm test` will run the jest tests
 
-## TODO
-- Make the build process more streamlined
-- Add some more tests, maybe mocking.
