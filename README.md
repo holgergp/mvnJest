@@ -1,5 +1,8 @@
 # mvnjest
 
+[![Build Status Travis](https://travis-ci.org/holgergp/mvnJest.svg?branch=master)](https://travis-ci.org/holgergp/mvnJest)
+
+
 mvnjest serves as an example how to use Jest in an Spring-Boot/Maven environment.
 
 The idea is to manage all client side artifacts by npm/webpack and to reference them in the Spring-Boot app via web-jars.
