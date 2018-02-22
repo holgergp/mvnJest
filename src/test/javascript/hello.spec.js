@@ -36,6 +36,7 @@ describe('ModalDialog should', () => {
 
     it('open and close on click at the clickable element', () => {
         $('#openDialog').click();
+        expect(isDialogOpen()).toBe(true);
         $('#openDialog').click();
         expect(isDialogOpen()).toBe(false);
     });

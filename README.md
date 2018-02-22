@@ -25,4 +25,4 @@ Looking at http://localhost:8080 will show the simple webapp.
 
 ## TODO
 - Make the build process more streamlined
-- Write some actual tests :)
+- Add some more tests, maybe mocking.
