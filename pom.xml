@@ -84,20 +84,20 @@
                             </arguments>
                         </configuration>
                     </execution>
-	                <execution>
-						<id>npm run build (compile)</id>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-						<phase>compile</phase>
-						<configuration>
-							<executable>npm</executable>
-							<arguments>
-								<argument>run</argument>
-								<argument>start</argument>
-							</arguments>
-						</configuration>
-					</execution>
+                    <execution>
+                        <id>npm run build (compile)</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>npm</executable>
+                            <arguments>
+                                <argument>run</argument>
+                                <argument>start</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
 
                     <!-- Required: The following will run unit tests.  My test scripts
                          in npm look for the property 'skipTests', so I map it to
@@ -117,8 +117,6 @@
                             </arguments>
                         </configuration>
                     </execution>
-
-
                 </executions>
             </plugin>
         </plugins>
