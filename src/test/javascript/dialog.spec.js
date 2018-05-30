@@ -1,7 +1,7 @@
 import {
     initPage,
     isDialogOpen
-} from '../../main/javascript/hello';
+} from '../../main/javascript/dialog';
 
 import 'jquery-ui/ui/unique-id';
 import 'jquery-ui/ui/widgets/button';
