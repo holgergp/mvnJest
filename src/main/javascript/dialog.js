@@ -3,22 +3,14 @@ import 'jquery-ui/ui/widget';
 import 'jquery-ui/ui/widgets/dialog';
 import 'jquery-ui/themes/base/all.css';
 
-
 $(() => {
     initPage();
 });
 
 const initDialog = () => _getDialogElement().dialog({autoOpen: false});
 
-const registerClickHandler = () => _getClickableElement().click(() => {
-    if (isDialogOpen()) {
-        closeDialog();
-    }
-    else {
-        openDialog();
-    }
-});
-
+const _clickHandler = () => isDialogOpen() ? closeDialog() : openDialog();
+const registerClickHandler = () => _getClickableElement().click(_clickHandler);
 
 export const initPage = () => {
     initDialog();
